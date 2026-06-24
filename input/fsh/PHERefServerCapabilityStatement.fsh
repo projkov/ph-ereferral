@@ -29,6 +29,10 @@ Description: "Defines the minimum required server capabilities for a system conf
 * rest[=].resource[=].documentation = "Patient demographics for the referred individual."
 * rest[=].resource[=].interaction[+].code = #read
 * rest[=].resource[=].interaction[+].code = #search-type
+* rest[=].resource[=].searchParam[+].name = "_id"
+* rest[=].resource[=].searchParam[=].extension[http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation].valueCode = #SHALL
+* rest[=].resource[=].searchParam[=].type = #token
+* rest[=].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[=].resource[=].searchParam[+].name = "identifier"
 * rest[=].resource[=].searchParam[=].extension[http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation].valueCode = #SHALL
 * rest[=].resource[=].searchParam[=].type = #token
